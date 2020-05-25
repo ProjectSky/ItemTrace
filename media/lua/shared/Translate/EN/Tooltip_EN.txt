@@ -1,0 +1,4 @@
+Tooltip_EN = {
+	Tooltip_item_Owner = "Own: ",
+	Tooltip_item_ID = "ID: ",
+}
