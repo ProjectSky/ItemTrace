@@ -16,9 +16,9 @@ print("Mod Loaded: " .. ItemTrace.NAME .. " by " .. ItemTrace.AUTHOR .. " (v" ..
 -- 此函数用来将数据保存至modData，_I _O 是为了尽量缩减字符数量，且尽量避免命名冲突，减少保存的数据大小
 -- @param item
 function ItemTrace.loadData(item)
-	if item:getModData()['_I'] == nil or item:getModData()['_O'] == nil then
-		item:getModData()['_I'] = getCurrentUserSteamID()
-		item:getModData()['_O'] = getOnlineUsername()
+  if item:getModData()['_I'] == nil or item:getModData()['_O'] == nil then
+    item:getModData()['_I'] = getCurrentUserSteamID()
+    item:getModData()['_O'] = getOnlineUsername()
   end
 end
 
@@ -35,7 +35,7 @@ function ItemTrace.HandleItem(item)
   end
 end
 
--- 此函数用来处理大容量和高负重率容器。目前并不可靠，而且标记地面物品似乎没有必要，后期可能会弃用
+-- 此函数用来处理地面物品，目前并不可靠，而且标记地面物品似乎没有必要，后期可能会弃用
 function ItemTrace.HandleFloorItem()
   local cell = getWorld():getCell()
   local char = getPlayer()
